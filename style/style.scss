@@ -21,7 +21,7 @@ body {
 
 $regular: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
 $bold: 'Gotham-Bold', sans-serif;
-$pink: #d4025d;
+$pink: #d8017a;
 $gray: #F9F2F7;
 $black: #1d1d1b;
 
@@ -179,6 +179,7 @@ $black: #1d1d1b;
     }
 
     &__logo {
+
       margin-bottom: 20px;
       opacity: 0;
       -webkit-animation: slidedown 0.8s ease forwards;
@@ -243,20 +244,22 @@ $black: #1d1d1b;
   }
 
   .es-hair {
-    background: url(../images/hair.png) no-repeat center;
+    background: #fef8fd url(../images/hair.png) no-repeat center;
     background-size: cover;
     padding: 32px;
     margin-bottom: 15px;
     position: relative;
     min-height: 200px;
+    // background-color: 
 
     &__title {
-      position: absolute;
+      // position: absolute;
       bottom: 0;
       right: 3%;
       max-width: 250px;
+      margin-bottom: 10px;
       font-size: 14px;
-      text-align: right;
+      text-transform: uppercase;
 
       &--normal {
         font-weight: 400;
@@ -265,12 +268,12 @@ $black: #1d1d1b;
   }
 
   .es-routine {
-    background: url(../images/routine-bg.png) no-repeat center;
+    background: url(../images/routine-bg.png) no-repeat center left;
     background-size: cover;
     padding: 32px;
     margin-bottom: 15px;
     position: relative;
-    min-height: 400px;
+    min-height: 500px;
 
     &__text-group {
       position: absolute;
@@ -307,6 +310,15 @@ $black: #1d1d1b;
       font-weight: 400;
       font-size: 18px;
       color: #1d1d1b;
+
+      &--uppercase {
+        display: block;
+        text-transform: uppercase;
+      }
+
+      &--bold {
+        font-weight: 700;
+      }
     }
   }
 
@@ -473,7 +485,12 @@ $black: #1d1d1b;
       font-weight: inherit;
       margin-bottom: 32px;
       font-size: 21px;
-      font-weight: 700;
+      font-weight: 400;
+      text-transform: uppercase;
+
+      &--bold {
+        font-weight: 700;
+      }
     }
 
     &__desc {
@@ -483,14 +500,40 @@ $black: #1d1d1b;
       color: inherit;
       font-family: inherit;
       font-weight: inherit;
-      font-size: 14px;
+      font-size: 18px;
       margin-bottom: 24px;
+      position: relative;
+      padding-left: 50px;
+
+      &::before {
+        content: '';
+        background-image: url('../images/check.png');
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-0%, -50%);
+      }
+
+      &--second {
+        padding-left: 0;
+        max-width: 360px;
+
+        &::before {
+          display: none;
+        }
+      }
 
       &--under {
         display: block;
         margin-top: 20px;
         margin-bottom: 20px;
         font-weight: bold;
+      }
+
+      &--bold {
+        font-weight: 700;
       }
     }
 
@@ -529,7 +572,7 @@ $black: #1d1d1b;
     &__second-right-title {
       @include text;
       font-weight: 700;
-      font-size: 25px;
+      font-size: 18px;
       text-transform: uppercase;
       text-align: center;
     }
@@ -542,20 +585,71 @@ $black: #1d1d1b;
     &__first-right-subtitle-3,
     &__second-left-subtitle-1,
     &__second-second-subtitle-1,
-    &__second-right-subtitle-1 {
+    &__second-right-subtitle-1,
+    &__second-right-subtitle-2 {
       @include text;
       font-weight: 300;
-      font-size: 16px;
+      font-size: 12px;
       text-transform: uppercase;
       text-align: center;
     }
 
+    &__first-left-image,
+    &__first-right-image,
+    &__second-left-image,
+    &__second-second-image,
+    &__second-right-image {
+      @include img;
+    }
+
+    &__first {
+      margin-bottom: 50px;
+    }
+
+    &__first,
+    &__second {
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      position: relative;
+    }
+
+    &__first-left-subtitle-1,
+    &__first-left-subtitle-2,
+    &__first-left-subtitle-3 {
+      position: absolute;
+      bottom: 0;
+    }
+
+    &__first-right-subtitle-1,
+    &__first-right-subtitle-2,
+    &__first-right-subtitle-3 {
+      position: absolute;
+      bottom: 0;
+    }
+
+    &__second-left-subtitle-1,
+    &__second-second-subtitle-1,
+    &__second-left-subtitle-1 {
+      position: absolute;
+      bottom: 0;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
 
 
   }
 
   .es-cross {
-    padding-bottom: 64px;
+    // padding-bottom: 64px;
     padding-top: 50px;
 
     &__title {
@@ -587,23 +681,65 @@ $black: #1d1d1b;
     }
 
     &__product {
-      width: 264px;
+      width: 225px;
       margin-bottom: 32px;
       display: flex;
       flex-flow: column;
       align-items: center;
     }
 
+    &__img {
+      min-height: 315px;
+    }
+
+
     &__product:hover .es-cross__link::before {
       transform: scaleX(1);
     }
 
     &__product:hover .es-cross__packshot {
-      transform: translateY(-8px);
+      // transform: translateY(-8px);
+    }
+
+    &__background {
+      padding: 25px;
+      min-height: 260px;
+      background-color: $gray;
     }
 
     &__packshot {
       transition: transform 0.3s;
+      position: relative;
+    }
+
+    &__packshot-title {
+      @include text;
+      font-weight: 700;
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    &__packshot-description {
+      @include text;
+      font-weight: 300;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    &__packshot-link {
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $pink;
+      color: #fff;
+      padding: 11px;
+      width: 85%;
+      text-align: center;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
     }
 
     &__text {
@@ -672,6 +808,7 @@ $black: #1d1d1b;
       max-width: 100%;
       display: block;
       margin: 0 auto;
+      margin-bottom: 45px;
       transition: all 0.3s ease-in-out;
     }
 
@@ -722,7 +859,8 @@ $black: #1d1d1b;
   @media screen and (min-width: 500px) {
     .es-kv {
       &__branding {
-        padding-top: 60%;
+        padding-top: 50%;
+        max-width: 180px;
       }
     }
 
@@ -740,7 +878,7 @@ $black: #1d1d1b;
 
     .es-hair {
       background-size: contain;
-      min-height: 533px;
+      min-height: 380px;
 
       &__title {
         max-width: 350px;
@@ -749,12 +887,16 @@ $black: #1d1d1b;
     }
   }
 
-  @media screen and (min-width: 560px) {}
+  @media screen and (min-width: 560px) {
+    .es-routine {
+      background: url(../images/routine-bg.png) no-repeat center;
+    }
+  }
 
   @media screen and (min-width: 620px) {
     .es-cross {
       &__product {
-        width: 175px;
+        // width: 175px;
       }
     }
 
@@ -764,6 +906,40 @@ $black: #1d1d1b;
       &__title {
         max-width: 300px;
         font-size: 20px;
+
+        &--second {
+          text-align: right;
+        }
+      }
+
+      &__left {
+        position: absolute;
+        left: 3%;
+        top: 3%;
+      }
+
+      &__description {
+        display: block;
+        max-width: 320px;
+
+        &--right {
+          text-align: right;
+        }
+      }
+
+      &__right {
+        position: absolute;
+        right: 3%;
+        bottom: 3%;
+      }
+    }
+
+    .es-colors {
+
+      &__first,
+      &__second {
+        flex-direction: row;
+        align-items: start;
       }
     }
 
@@ -826,7 +1002,7 @@ $black: #1d1d1b;
         top: 4%;
         padding: 0;
         z-index: 1;
-        width: 350px;
+        // width: 350px;
       }
     }
 
@@ -912,8 +1088,8 @@ $black: #1d1d1b;
       }
 
       &__name {
-        margin-bottom: 20px;
-        font-size: 21px;
+        margin-bottom: 65px;
+        font-size: 28px;
       }
     }
 
@@ -925,6 +1101,7 @@ $black: #1d1d1b;
       &__products {
         display: flex;
         justify-content: center;
+        align-items: flex-start;
         flex-wrap: wrap;
         max-width: 600px;
       }
@@ -1022,7 +1199,7 @@ $black: #1d1d1b;
     .es-hair {
       &__title {
         max-width: 450px;
-        font-size: 30px;
+        font-size: 20px;
         line-height: 1.1;
       }
     }
@@ -1042,7 +1219,7 @@ $black: #1d1d1b;
 
     .es-cross {
       position: relative;
-      background: linear-gradient(to bottom, white 64%, #f5f5f5 100%);
+      // background: linear-gradient(to bottom, white 64%, #f5f5f5 100%);
 
       &__subtitle {
         max-width: 650px;
@@ -1088,12 +1265,13 @@ $black: #1d1d1b;
     }
 
     &__title {
-      font-size: 32px;
+      max-width: 300px;
+      font-size: 20px;
       margin-bottom: 0;
     }
 
     &__subtitle {
-      font-size: 22px;
+      font-size: 18px;
     }
   }
 }
