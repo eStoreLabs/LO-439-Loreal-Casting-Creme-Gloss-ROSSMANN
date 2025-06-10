@@ -1375,14 +1375,15 @@ $black: #1d1d1b;
         &::after {
           right: -8px;
         }
+
       }
 
       &__products {
         margin-bottom: 50px;
-        max-width: none;
         position: relative;
         z-index: 1;
         gap: 2px;
+        max-width: 600px;
       }
 
       &__background {
@@ -1400,6 +1401,12 @@ $black: #1d1d1b;
       &__packshot {
         bottom: -8px;
         right: 6%;
+      }
+    }
+
+    .es-cross {
+      &__products {
+        max-width: none;
       }
     }
 
@@ -1459,9 +1466,7 @@ $black: #1d1d1b;
         -moz-column-gap: 150px;
         column-gap: 150px;
       }
-
     }
-
 
   }
 

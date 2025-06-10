@@ -1075,10 +1075,10 @@
   }
   #es-rc #es-rc-content .es-cross__products {
     margin-bottom: 50px;
-    max-width: none;
     position: relative;
     z-index: 1;
     gap: 2px;
+    max-width: 600px;
   }
   #es-rc #es-rc-content .es-cross__background {
     min-height: 220px;
@@ -1091,6 +1091,9 @@
   #es-rc #es-rc-content .es-kv__packshot {
     bottom: -8px;
     right: 6%;
+  }
+  #es-rc #es-rc-content .es-cross__products {
+    max-width: none;
   }
   #es-rc #es-rc-content .es-colors__first-left-subtitle-1, #es-rc #es-rc-content .es-colors__first-left-subtitle-2, #es-rc #es-rc-content .es-colors__first-left-subtitle-3, #es-rc #es-rc-content .es-colors__first-right-subtitle-1, #es-rc #es-rc-content .es-colors__first-right-subtitle-2, #es-rc #es-rc-content .es-colors__first-right-subtitle-3, #es-rc #es-rc-content .es-colors__second-left-subtitle-1, #es-rc #es-rc-content .es-colors__second-second-subtitle-1, #es-rc #es-rc-content .es-colors__second-right-subtitle-1, #es-rc #es-rc-content .es-colors__second-right-subtitle-2 {
     font-size: 10px;
