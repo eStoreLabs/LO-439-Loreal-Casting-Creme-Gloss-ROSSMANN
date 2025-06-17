@@ -256,11 +256,12 @@
   font-weight: 700;
 }
 #es-rc #es-rc-content .es-info {
-  margin-bottom: 64px;
+  margin-bottom: 40px;
   padding-top: 10px;
 }
 #es-rc #es-rc-content .es-info__title {
   margin-top: 20px;
+  margin-bottom: 40px;
   padding: 0;
   line-height: inherit;
   color: inherit;
@@ -324,7 +325,6 @@
   line-height: inherit;
   font-family: inherit;
   font-weight: inherit;
-  margin-bottom: 32px;
   font-size: 21px;
   font-weight: 700;
   text-align: center;

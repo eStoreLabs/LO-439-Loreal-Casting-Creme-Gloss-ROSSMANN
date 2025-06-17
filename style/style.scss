@@ -324,11 +324,12 @@ $black: #1d1d1b;
   }
 
   .es-info {
-    margin-bottom: 64px;
+    margin-bottom: 40px;
     padding-top: 10px;
 
     &__title {
       margin-top: 20px;
+      margin-bottom: 40px;
       padding: 0;
       line-height: inherit;
       color: inherit;
@@ -399,7 +400,6 @@ $black: #1d1d1b;
       line-height: inherit;
       font-family: inherit;
       font-weight: inherit;
-      margin-bottom: 32px;
       font-size: 21px;
       font-weight: 700;
       text-align: center;
